@@ -2,6 +2,7 @@
   "name": "por-febour-client",
   "version": "0.1.0",
   "private": true,
+  "homepage":"https://sush-and-vaibhaw.herokuapp.com",
   "dependencies": {
     "autoprefixer": "7.1.2",
     "axios": "^0.16.2",
@@ -41,6 +42,7 @@
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.1.2",
     "redux": "^3.7.2",
+    "serve": "^6.4.1",
     "style-loader": "0.18.2",
     "sw-precache-webpack-plugin": "0.11.4",
     "url-loader": "0.5.9",
@@ -53,8 +55,9 @@
     "fsevents": "*"
   },
   "scripts": {
-    "start": "node scripts/start.js",
+    "start": "npm run build && serve -s build",
     "build": "node scripts/build.js",
+    "startd": "node scripts/start.js",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
