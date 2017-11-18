@@ -176,10 +176,10 @@ const actionShowAlert = (alertMsg, alertType) => {
         alertType
     }
 }
-
+const saveRsvpUrl = "https://api-rsvp.herokuapp.com/saveRsvp/";
 const submitRsvp = async (dispatch, rsvp) => {
 
-    let action = await axios.post('saveRsvp/', {
+    let action = await axios.post(saveRsvpUrl, {
         "name": rsvp.name,
         "phone": rsvp.phone,
         "email": rsvp.email,
