@@ -2,9 +2,9 @@ import React from 'react';
 
 const footerStyle = {
     'color': 'grey',
-    'text-align': 'center',
-    'font-family': 'monospace',
-    'font-size': 'xx-small'
+    'textAlign': 'center',
+    'fontFamily': 'monospace',
+    'fontSize': 'xx-small'
 }
 
 const Footer = () => {
