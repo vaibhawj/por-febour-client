@@ -12,6 +12,7 @@ import Logistics from './Logistics';
 import NoMatch from './NoMatch';
 import Header from './Header';
 import Photos from './Photos';
+import Footer from './Footer';
 
 class App2 extends React.Component {
     render() {
@@ -32,8 +33,7 @@ class App2 extends React.Component {
                             <Route component={NoMatch} />
                         </Switch>
                     </div>
-
-
+                    <Footer />
                 </div>
             </Router>
         )
