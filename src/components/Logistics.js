@@ -1,30 +1,45 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {ACTION_SET_ACTIVE_TAB, TAB_LOGISTICS} from '../constants';
+import { connect } from 'react-redux';
+import { ACTION_SET_ACTIVE_TAB, TAB_LOGISTICS } from '../constants';
+
+const iframeWidth = "100%";
+const iframeHeight = "350px";
+
+const iframeHtml = `<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d124431.71832435323!2d77.56368747855326!3d12.940389910708253!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae161206c93841%3A0x182db9fe5710e140!2sTerapanth+Bhawan+Bangalore!5e0!3m2!1sen!2sin!4v1511044279372" width=${iframeWidth} height=${iframeHeight} frameborder="0" style="border:0" allowfullscreen></iframe>`;
 
 class LogisticsComp extends React.Component {
 
-    componentWillMount(){
+    componentWillMount() {
         this.props.setRoute(TAB_LOGISTICS);
     }
 
-    render(){
+    constructor() {
+        super();
+        this.iframe = () => {
+            return {
+                __html: iframeHtml
+            }
+        }
+    }
+
+    render() {
         return (
-            <div style={{ marginLeft: '2%', marginRight: '2%' }}>
+            <div style={{ marginLeft: '2%', marginRight: '2%' }} >
                 <h3>Logistics</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel, malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue, placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci semper, rhoncus ligula. Vivamus scelerisque.</p>
-            </div>
+                <p>It is not very far from Majestic railway station</p>
+                <div dangerouslySetInnerHTML={this.iframe()} />
+            </div >
         );
     }
 }
 
-const mapStateToProps = (state) =>{
+const mapStateToProps = (state) => {
     return ({});
 }
 
 const mapDispatchToProps = (dispatch) => {
     return ({
-        setRoute:(tab)=> dispatch({ type: ACTION_SET_ACTIVE_TAB, tab })
+        setRoute: (tab) => dispatch({ type: ACTION_SET_ACTIVE_TAB, tab })
     })
 
 }
