@@ -2,7 +2,7 @@
   "name": "por-febour-client",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://sush-and-vaibhaw.herokuapp.com",
+  "homepage": "https://sush-and-vaibhaw.herokuapp.com",
   "dependencies": {
     "autoprefixer": "7.1.2",
     "axios": "^0.16.2",
@@ -57,7 +57,7 @@
   "scripts": {
     "start": "npm run build && serve -s build",
     "build": "node scripts/build.js",
-    "startd": "node scripts/start.js",
+    "dev": "node scripts/start.js",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
