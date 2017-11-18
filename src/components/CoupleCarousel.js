@@ -12,13 +12,13 @@ class CoupleCarousel extends React.Component {
     }
 
     componentWillMount() {
-        axios.get('http://res.cloudinary.com/dqixonz2g/image/list/carousel.json')
+        axios.get('https://res.cloudinary.com/dqixonz2g/image/list/carousel.json')
             .then(res => {
                 const posts = res.data.resources;
                 let images = [];
                 let iD = 0;
                 posts.map(post => {
-                    images.push({ url: `http://res.cloudinary.com/dqixonz2g/image/upload/w_900,h_500,c_fill,g_faces/v${post.version}/${post.public_id}.${post.format}`, caption: post.context.custom.caption, id: iD++ });
+                    images.push({ url: `https://res.cloudinary.com/dqixonz2g/image/upload/w_900,h_500,c_fill,g_faces/v${post.version}/${post.public_id}.${post.format}`, caption: post.context.custom.caption, id: iD++ });
                 });
 
                 this.setState({ images });
