@@ -25,7 +25,6 @@ class LogisticsComp extends React.Component {
     render() {
         return (
             <div style={{ marginLeft: '2%', marginRight: '2%' }} >
-                <h3>Logistics</h3>
                 <p>It is not very far from Majestic railway station</p>
                 <div dangerouslySetInnerHTML={this.iframe()} />
             </div >
