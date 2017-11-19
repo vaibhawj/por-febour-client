@@ -14,7 +14,7 @@ import Header from './Header';
 import Photos from './Photos';
 import Footer from './Footer';
 
-class App2 extends React.Component {
+class App extends React.Component {
     render() {
 
         return (
@@ -40,4 +40,4 @@ class App2 extends React.Component {
     }
 }
 
-export default App2;
+export default App;
