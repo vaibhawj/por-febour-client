@@ -73,3 +73,8 @@
   opacity: 0.01;
   transition: opacity 300ms ease-in;
 }
+
+.tabIcon {
+    height: 4rem;
+    width: 4rem;
+}
