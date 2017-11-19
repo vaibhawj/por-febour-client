@@ -9,7 +9,15 @@ import {
     ACTION_SET_ACTIVE_TAB, ACTION_SET_FIELD, ACTION_SUBMIT_RSVP,
     TAB_RSVP, ACTION_ALERT_DISMISS, ACTION_SHOW_ALERT
 } from '../constants';
+import AddToCalendar from 'react-add-to-calendar';
 
+const event = {
+    title: "Sushila and Vaibhaw's marriage",
+    description: 'Bless us with your presence as we begin a new chapter in our life',
+    location: 'Terapanth Bhawan, Gandhi Nagar, Bengaluru, Karnataka, India',
+    startTime: '2018-02-24T18:00:00+05:30',
+    endTime: '2018-02-24T23:59:00+05:30'
+}
 
 class RSVPComp extends React.Component {
 
@@ -18,7 +26,7 @@ class RSVPComp extends React.Component {
     }
 
     render() {
-        if (this.props.alertVisible && this.props.alertType==='success') {
+        if (this.props.alertVisible && this.props.alertType === 'success') {
             setTimeout(function (self) {
                 self.props.handleAlertDismiss();
             }, 3000, this);
@@ -122,9 +130,8 @@ class RSVPComp extends React.Component {
                             {this.props.isLoading ? 'Saving' : 'Submit'} </Button>
 
                         <span className="calendarButton">
-                            <a href="http://add.eventable.com/events/5a1195c9bc72f4001929b879/5a1195cbbc72f40016446adc/" className="eventable-link" target="_blank" data-key="5a1195c9bc72f4001929b879" data-event="5a1195cbbc72f40016446adc" data-style="3">Add to Calendar</a>
+                            <AddToCalendar event={event} />
                         </span>
-
                     </div>
                 </form>
             </div>
