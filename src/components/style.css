@@ -151,3 +151,7 @@
 .react-add-to-calendar__button {
     padding: 0.8rem;
 }
+
+.react-add-to-calendar__button:hover {
+    text-decoration: none;
+}
