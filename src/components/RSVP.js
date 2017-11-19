@@ -106,19 +106,26 @@ class RSVPComp extends React.Component {
 
                     </Collapse>
 
-                    <Button bsStyle="primary" onClick={
-                        (e) => {
-                            e.preventDefault(); this.props.handleSubmit({
-                                name: this.props.name,
-                                phone: this.props.phone,
-                                email: this.props.email,
-                                isComing: this.props.isComing,
-                                msg: this.props.msg
-                            })
-                        }} disabled={this.props.isLoading} >
-                        {this.props.isLoading && <Glyphicon glyph="refresh" className="spinning" />}
-                        {this.props.isLoading ? 'Saving' : 'Submit'} </Button>
+                    <div className="rsvpButtons">
+                        <Button className="submitButton"
+                            bsStyle="primary" onClick={
+                                (e) => {
+                                    e.preventDefault(); this.props.handleSubmit({
+                                        name: this.props.name,
+                                        phone: this.props.phone,
+                                        email: this.props.email,
+                                        isComing: this.props.isComing,
+                                        msg: this.props.msg
+                                    })
+                                }} disabled={this.props.isLoading} >
+                            {this.props.isLoading && <Glyphicon glyph="refresh" className="spinning" />}
+                            {this.props.isLoading ? 'Saving' : 'Submit'} </Button>
 
+                        <span className="calendarButton">
+                            <a href="http://add.eventable.com/events/5a1195c9bc72f4001929b879/5a1195cbbc72f40016446adc/" className="eventable-link" target="_blank" data-key="5a1195c9bc72f4001929b879" data-event="5a1195cbbc72f40016446adc" data-style="3">Add to Calendar</a>
+                        </span>
+
+                    </div>
                 </form>
             </div>
         );
