@@ -19,7 +19,7 @@ const TitleBar = () => {
             <span className="groom-name">&nbsp;
                     <span>&amp;</span> Vaibhaw
                 </span>
-            <div className="wedding-date">
+            <div className="wedding-date" title="Click me to add to Calendar">
                 <AddToCalendar event={event} buttonLabel="24th FEB, 2018"
                     listItems={listItems}
                 />

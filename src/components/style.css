@@ -135,11 +135,12 @@
     padding: 5px 0px 5px 4px;
     z-index: 3;
     left: 2rem;
+    width: max-content;
 }
 
 .react-add-to-calendar__dropdown > ul {
     position: relative;
-    left: -3rem;
+    left: -2rem;
 }
 
 .react-add-to-calendar__dropdown > ul > li {
