@@ -9,15 +9,6 @@ import {
     ACTION_SET_ACTIVE_TAB, ACTION_SET_FIELD, ACTION_SUBMIT_RSVP,
     TAB_RSVP, ACTION_ALERT_DISMISS, ACTION_SHOW_ALERT
 } from '../constants';
-import AddToCalendar from 'react-add-to-calendar';
-
-const event = {
-    title: "Sushila and Vaibhaw's marriage",
-    description: 'Bless us with your presence as we begin a new chapter in our life',
-    location: 'Terapanth Bhawan, Gandhi Nagar, Bengaluru, Karnataka, India',
-    startTime: '2018-02-24T18:00:00+05:30',
-    endTime: '2018-02-24T23:59:00+05:30'
-}
 
 class RSVPComp extends React.Component {
 
@@ -128,10 +119,6 @@ class RSVPComp extends React.Component {
                                 }} disabled={this.props.isLoading} >
                             {this.props.isLoading && <Glyphicon glyph="refresh" className="spinning" />}
                             {this.props.isLoading ? 'Saving' : 'Submit'} </Button>
-
-                        <span className="calendarButton">
-                            <AddToCalendar event={event} />
-                        </span>
                     </div>
                 </form>
             </div>
