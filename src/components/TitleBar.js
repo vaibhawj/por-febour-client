@@ -11,13 +11,19 @@ const event = {
 }
 
 const listItems = [{ apple: "Apple" }, { google: "Google" }, { outlook: "Outlook" }, { outlookcom: "Outlook.com" }, { yahoo: "Yahoo" }];
-const dateHtml = `<span><!-- react-text: 16 --> ${date}<!-- /react-text --><i class="glyphicon glyphicon-calendar saveDate"></i></span>`;
+const dateHtml = `<span><!-- react-text: 16 --> ${date}<!-- /react-text --><i id="saveDate" class="glyphicon glyphicon-calendar saveDate"></i></span>`;
+
+const handleClick = () => {
+    const calendarIcon = document.getElementById('saveDate');
+    console.log(calendarIcon);
+    calendarIcon.classList.add('saveDatePaused');
+}
 
 class TitleBar extends React.Component {
 
     componentDidMount() {
-       const dateElement = document.getElementsByClassName('react-add-to-calendar__button')[0];
-       dateElement.innerHTML = dateHtml;
+        const dateElement = document.getElementsByClassName('react-add-to-calendar__button')[0];
+        dateElement.innerHTML = dateHtml;
     }
 
     render() {
@@ -27,7 +33,7 @@ class TitleBar extends React.Component {
                 <span className="groom-name">&nbsp;
                     <span>&amp;</span> Vaibhaw
                 </span>
-                <div className="wedding-date" title="Click me to add to Calendar">
+                <div className="wedding-date" onClick={ handleClick }>
                     <AddToCalendar event={event} buttonLabel={date}
                         listItems={listItems} buttonTemplate="textOnly"
                     />

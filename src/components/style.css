@@ -170,3 +170,11 @@
     animation: blinker 3s linear infinite;
     animation-delay: 2s;
 }
+
+.saveDatePaused {
+    -webkit-animation-play-state:paused;
+    -moz-animation-play-state:paused;
+    -o-animation-play-state:paused; 
+    animation-play-state:paused;
+    display: none;
+}
