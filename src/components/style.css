@@ -162,19 +162,13 @@
 @keyframes blinker {  
     50% { opacity: 0; }
 }
-
+.animationActive {
+    animation: blinker 3s linear infinite;
+    animation-delay: 2s;
+}
 .saveDate {
     color: #4285F4;
     font-size: 2rem;
     margin-left: 1rem;
-    animation: blinker 3s linear infinite;
-    animation-delay: 2s;
 }
 
-.saveDatePaused {
-    -webkit-animation-play-state:paused;
-    -moz-animation-play-state:paused;
-    -o-animation-play-state:paused; 
-    animation-play-state:paused;
-    display: none;
-}

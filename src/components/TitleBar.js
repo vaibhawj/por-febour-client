@@ -12,7 +12,7 @@ const event = {
 }
 
 const listItems = [{ apple: "Apple" }, { google: "Google" }, { outlook: "Outlook" }, { outlookcom: "Outlook.com" }, { yahoo: "Yahoo" }];
-const dateHtml = `<span><!-- react-text: 16 --> ${date}<!-- /react-text --><i id="saveDate" class="glyphicon glyphicon-calendar saveDate"></i></span>`;
+const dateHtml = `<span><!-- react-text: 16 --> ${date}<!-- /react-text --><i id="saveDate" class="glyphicon glyphicon-calendar saveDate animationActive"></i></span>`;
 const tooltip = (
     <Tooltip id="tooltip">Click to mark the date!</Tooltip>
 );
@@ -21,7 +21,7 @@ const tooltip = (
 const handleClick = () => {
     const calendarIcon = document.getElementById('saveDate');
     console.log(calendarIcon);
-    calendarIcon.classList.add('saveDatePaused');
+    calendarIcon.classList.remove('animationActive');
 }
 
 class TitleBar extends React.Component {
