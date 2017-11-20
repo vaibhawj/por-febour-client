@@ -126,6 +126,10 @@
     margin-top: 2rem;
 }
 
+@keyframes blinker {  
+    50% { opacity: 0; }
+}
+
 .react-add-to-calendar__button {
     border: none;
     background-color: transparent;
@@ -153,4 +157,16 @@
 
 .react-add-to-calendar__button:hover {
     text-decoration: none;
+}
+
+@keyframes blinker {  
+    50% { opacity: 0; }
+}
+
+.saveDate {
+    color: #4285F4;
+    font-size: 2rem;
+    margin-left: 1rem;
+    animation: blinker 3s linear infinite;
+    animation-delay: 2s;
 }
