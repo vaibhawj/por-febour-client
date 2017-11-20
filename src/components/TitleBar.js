@@ -1,6 +1,7 @@
 import React from 'react';
 import AddToCalendar from 'react-add-to-calendar';
 
+const date = "24th FEB, 2018";
 const event = {
     title: "Sushila and Vaibhaw's marriage",
     description: 'Bless us with your presence as we begin a new chapter in our life',
@@ -10,8 +11,7 @@ const event = {
 }
 
 const listItems = [{ apple: "Apple" }, { google: "Google" }, { outlook: "Outlook" }, { outlookcom: "Outlook.com" }, { yahoo: "Yahoo" }];
-
-const dateHtml = '<span><!-- react-text: 16 --> 24th FEB, 2018<!-- /react-text --><i class="glyphicon glyphicon-calendar saveDate"></i></span>';
+const dateHtml = `<span><!-- react-text: 16 --> ${date}<!-- /react-text --><i class="glyphicon glyphicon-calendar saveDate"></i></span>`;
 
 class TitleBar extends React.Component {
 
@@ -28,7 +28,7 @@ class TitleBar extends React.Component {
                     <span>&amp;</span> Vaibhaw
                 </span>
                 <div className="wedding-date" title="Click me to add to Calendar">
-                    <AddToCalendar event={event} buttonLabel="24th FEB, 2018"
+                    <AddToCalendar event={event} buttonLabel={date}
                         listItems={listItems} buttonTemplate="textOnly"
                     />
                 </div>
