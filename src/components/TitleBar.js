@@ -1,5 +1,6 @@
 import React from 'react';
 import AddToCalendar from 'react-add-to-calendar';
+import { Tooltip, OverlayTrigger } from 'react-bootstrap';
 
 const date = "24th FEB, 2018";
 const event = {
@@ -12,6 +13,10 @@ const event = {
 
 const listItems = [{ apple: "Apple" }, { google: "Google" }, { outlook: "Outlook" }, { outlookcom: "Outlook.com" }, { yahoo: "Yahoo" }];
 const dateHtml = `<span><!-- react-text: 16 --> ${date}<!-- /react-text --><i id="saveDate" class="glyphicon glyphicon-calendar saveDate"></i></span>`;
+const tooltip = (
+    <Tooltip id="tooltip">Click to mark the date!</Tooltip>
+);
+
 
 const handleClick = () => {
     const calendarIcon = document.getElementById('saveDate');
@@ -33,10 +38,14 @@ class TitleBar extends React.Component {
                 <span className="groom-name">&nbsp;
                     <span>&amp;</span> Vaibhaw
                 </span>
-                <div className="wedding-date" onClick={ handleClick }>
-                    <AddToCalendar event={event} buttonLabel={date}
-                        listItems={listItems} buttonTemplate="textOnly"
-                    />
+                <div className="wedding-date" onClick={handleClick}>
+                    <OverlayTrigger placement="right" overlay={tooltip}>
+                        <span>
+                            <AddToCalendar event={event} buttonLabel={date}
+                                listItems={listItems} buttonTemplate="textOnly"
+                            />
+                        </span>
+                    </OverlayTrigger>
                 </div>
 
             </header>
