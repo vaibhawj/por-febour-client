@@ -16,23 +16,23 @@
 
 .titlebar .bride-name {
     font-family: 'EdwardianScrAltITCTT';
-    font-size: 5rem;
+    font-size: 6rem;
     line-height: 100%;
     width: 100%; 
 }
 
 .titlebar .groom-name {
     font-family: 'FuturaLTBook';
-    font-size: 3rem;
+    font-size: 3.7rem;
     line-height: 100%;
     width: 100%; 
 }
 
 .titlebar .wedding-date {
     font-family: 'FuturaLTBook';
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    margin-top: 15px;
+    font-size: 1.3em;
+    margin-bottom: 0rem;
+    margin-top: 1rem;
 }
 
 .nav-tabs { border-bottom: 2px solid #DDD; }
@@ -133,6 +133,7 @@
     z-index: 3;
     left: 2rem;
     width: max-content;
+    font-size: 1.7rem;
 }
 
 .react-add-to-calendar__dropdown > ul {
@@ -161,7 +162,7 @@
 }
 .saveDate {
     color: #4285F4;
-    font-size: 2rem;
+    font-size: 1.7rem;
     margin-left: 1rem;
 }
 
