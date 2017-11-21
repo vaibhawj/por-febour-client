@@ -4,6 +4,7 @@ import {
     Switch,
     Route, Redirect
 } from 'react-router-dom';
+import {createBrowserHistory} from 'history';
 
 import Couple from './Couple';
 import Wedding from './Wedding';
@@ -18,7 +19,7 @@ class App extends React.Component {
     render() {
 
         return (
-            <Router>
+            <Router onUpdate={() => window.scrollTo(0, 0)} history={createBrowserHistory()}>
                 <div className="container">
                     <Header />
 
