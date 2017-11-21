@@ -169,3 +169,7 @@
 .sticky-inner-wrapper {
     background-color: white;
 }
+
+.carousel-indicators {
+    z-index: 1 !important;
+}
