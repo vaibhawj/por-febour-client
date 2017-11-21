@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { TAB_COUPLE, TAB_WEDDING, TAB_RSVP, TAB_LOGISTICS, TAB_PHOTOS } from '../constants';
 
@@ -41,4 +42,17 @@ const NavBar = ({ activeTab }) => {
     )
 }
 
-export default NavBar;
+const mapStateToProps = (state) => {
+    return ({
+        activeTab: state.activeTab
+    })
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return ({
+
+    })
+
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NavBar);
