@@ -16,14 +16,14 @@
 
 .titlebar .bride-name {
     font-family: 'EdwardianScrAltITCTT';
-    font-size: 5em;
+    font-size: 5rem;
     line-height: 100%;
     width: 100%; 
 }
 
 .titlebar .groom-name {
     font-family: 'FuturaLTBook';
-    font-size: 3em;
+    font-size: 3rem;
     line-height: 100%;
     width: 100%; 
 }
@@ -78,13 +78,6 @@
 .tabIcon {
     width: 4rem;
     height: auto;
-}
-
-@media only screen and (max-width: 414px) {
-    .tabIcon {
-        width: 4.4rem;
-        height: auto;
-    }
 }
 
 @media only screen and (max-width: 414px) {
