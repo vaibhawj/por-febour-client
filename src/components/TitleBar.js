@@ -20,7 +20,6 @@ const tooltip = (
 
 const handleClick = () => {
     const calendarIcon = document.getElementById('saveDate');
-    console.log(calendarIcon);
     calendarIcon.classList.remove('animationActive');
 }
 
