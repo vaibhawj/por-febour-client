@@ -14,8 +14,6 @@ const initialState = {
         alertVisible: false,
         alertMsg: '',
         alertType: '',
-        hasOldRsvp: false,
-        _rev: '',
         isLoading: false
     }
 }
@@ -58,14 +56,14 @@ const Reducer = (state = initialState, action) => {
 
         case ACTION_SHOW_ALERT:
            let newRsvp = action.alertType==='success'? initialState.rsvp : state.rsvp;
+           console.log(newRsvp)
             return {
                 ...state,
                 alertVisible: true,
                 alertType: action.alertType,
                 alertMsg: action.alertMsg,
                 rsvp: {
-                    ...newRsvp,
-                    isLoading: false
+                    ...newRsvp
                 }
             }
 

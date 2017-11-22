@@ -42,7 +42,7 @@ class RSVPComp extends React.Component {
 
                         <InputGroup>
                             <InputGroup.Addon><Glyphicon glyph="earphone" /></InputGroup.Addon>
-                            <Phone defaultCountry={'in'} onChange={this.props.handlePhoneChange} />
+                            <Phone defaultCountry={'in'} onChange={this.props.handlePhoneChange} value={this.props.phone}/>
                         </InputGroup>
                         <FormControl.Feedback />
                     </FormGroup>
