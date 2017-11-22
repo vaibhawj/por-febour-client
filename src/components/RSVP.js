@@ -9,6 +9,8 @@ import {
     ACTION_SET_ACTIVE_TAB, ACTION_SET_FIELD, ACTION_SUBMIT_RSVP,
     TAB_RSVP, ACTION_ALERT_DISMISS, ACTION_SHOW_ALERT
 } from '../constants';
+import Phone from 'react-phone-input';
+import {PhoneNumberUtil} from 'google-libphonenumber';
 
 class RSVPComp extends React.Component {
 
@@ -40,12 +42,7 @@ class RSVPComp extends React.Component {
 
                         <InputGroup>
                             <InputGroup.Addon><Glyphicon glyph="earphone" /></InputGroup.Addon>
-                            <FormControl
-                                type="phone"
-                                value={this.props.phone}
-                                placeholder="Enter phone"
-                                onChange={this.props.handlePhoneChange}
-                            />
+                            <Phone defaultCountry={'in'} onChange={this.props.handlePhoneChange} />
                         </InputGroup>
                         <FormControl.Feedback />
                     </FormGroup>
@@ -134,9 +131,15 @@ const nameValidationState = (name) => {
 }
 
 const phoneValidationState = (phone) => {
-    if (phone === '') return null;
-    return phone.match(/^([0|\+[0-9]{1,5})?([7-9][0-9]{9})$/) ?
-        'success' : 'error';
+    if (phone==='+91') return null;
+    let valid = false;
+    try {
+      const phoneUtil = PhoneNumberUtil.getInstance();
+      valid =  phoneUtil.isValidNumber(phoneUtil.parse(phone));
+    } catch(e) {
+      valid = false;
+    }
+    return valid ? 'success' : 'error';
 }
 
 const emailValidationState = (email) => {
@@ -203,7 +206,7 @@ const callSaveRsvp = (dispatch, rsvp) => {
 
         dispatch({ type: ACTION_SUBMIT_RSVP });
 
-        submitRsvp(dispatch, rsvp);
+        submitRsvp(dispatch, {...rsvp, phone: rsvp.phone.substring(1)});
     } else {
         dispatch(actionShowAlert('Except Email other fields are mandatory', 'warning'));
     }
@@ -214,7 +217,7 @@ const mapDispatchToProps = (dispatch) => {
         setRoute: (tab) => dispatch({ type: ACTION_SET_ACTIVE_TAB, tab }),
         handleEmailChange: (e) => dispatch({ type: ACTION_SET_FIELD, fieldName: 'email', value: e.target.value }),
         handleNameChange: (e) => dispatch({ type: ACTION_SET_FIELD, fieldName: 'name', value: e.target.value }),
-        handlePhoneChange: (e) => dispatch({ type: ACTION_SET_FIELD, fieldName: 'phone', value: e.target.value }),
+        handlePhoneChange: (value) => dispatch({ type: ACTION_SET_FIELD, fieldName: 'phone', value }),
         handlePlanChange: (value) => dispatch({ type: ACTION_SET_FIELD, fieldName: 'isComing', value }),
         handleMsgChange: (e) => dispatch({ type: ACTION_SET_FIELD, fieldName: 'msg', value: e.target.value }),
         handleSubmit: (rsvp) => callSaveRsvp(dispatch, rsvp),

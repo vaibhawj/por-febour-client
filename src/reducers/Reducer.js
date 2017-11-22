@@ -8,7 +8,7 @@ const initialState = {
     rsvp: {
         name: '',
         email: '',
-        phone: '',
+        phone: '+91',
         isComing: '',
         msg: '',
         alertVisible: false,

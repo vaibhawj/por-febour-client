@@ -172,3 +172,12 @@
 .carousel-indicators {
     z-index: 1 !important;
 }
+
+.country-list {
+    width: 28.5rem !important;
+}
+
+.react-tel-input > input.form-control {
+    height: 34px !important;
+    border-radius: 4px !important;
+}
