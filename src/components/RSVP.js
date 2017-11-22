@@ -7,24 +7,34 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import {
     ACTION_SET_ACTIVE_TAB, ACTION_SET_FIELD, ACTION_SUBMIT_RSVP,
-    TAB_RSVP, ACTION_ALERT_DISMISS, ACTION_SHOW_ALERT
+    TAB_RSVP, ACTION_ALERT_DISMISS, ACTION_SHOW_ALERT, ACTION_INIT
 } from '../constants';
 import Phone from 'react-phone-input';
-import {PhoneNumberUtil} from 'google-libphonenumber';
+import { PhoneNumberUtil } from 'google-libphonenumber';
+
+const hackForClearingFields = () => {
+
+    const isComingEle = document.getElementsByClassName('btn btn-default active')[0];
+    isComingEle.classList.remove('active');
+}
 
 class RSVPComp extends React.Component {
 
     componentWillMount() {
         this.props.setRoute(TAB_RSVP);
+       // this.props.initialize();
+        
     }
 
     render() {
         if (this.props.alertVisible && this.props.alertType === 'success') {
             setTimeout(function (self) {
+               // hackForClearingFields();
+
                 self.props.handleAlertDismiss();
             }, 3000, this);
         }
-
+        
         return (
             <div style={{ marginLeft: '2%', marginRight: '2%' }}>
                 <form>
@@ -42,7 +52,9 @@ class RSVPComp extends React.Component {
 
                         <InputGroup>
                             <InputGroup.Addon><Glyphicon glyph="earphone" /></InputGroup.Addon>
-                            <Phone defaultCountry={'in'} onChange={this.props.handlePhoneChange} value={this.props.phone}/>
+                            <Phone
+                                defaultCountry={'in'} onChange={this.props.handlePhoneChange} value={this.props.phone}
+                            />
                         </InputGroup>
                         <FormControl.Feedback />
                     </FormGroup>
@@ -131,13 +143,13 @@ const nameValidationState = (name) => {
 }
 
 const phoneValidationState = (phone) => {
-    if (phone==='+91') return null;
+    if (phone === '+91') return null;
     let valid = false;
     try {
-      const phoneUtil = PhoneNumberUtil.getInstance();
-      valid =  phoneUtil.isValidNumber(phoneUtil.parse(phone));
-    } catch(e) {
-      valid = false;
+        const phoneUtil = PhoneNumberUtil.getInstance();
+        valid = phoneUtil.isValidNumber(phoneUtil.parse(phone));
+    } catch (e) {
+        valid = false;
     }
     return valid ? 'success' : 'error';
 }
@@ -168,7 +180,7 @@ const mapStateToProps = (state) => {
         alertVisible: state.alertVisible,
         alertType: state.alertType,
         alertMsg: state.alertMsg,
-        isLoading: state.rsvp.isLoading
+        isLoading: state.isLoading
     })
 }
 
@@ -206,7 +218,7 @@ const callSaveRsvp = (dispatch, rsvp) => {
 
         dispatch({ type: ACTION_SUBMIT_RSVP });
 
-        submitRsvp(dispatch, {...rsvp, phone: rsvp.phone.substring(1)});
+        submitRsvp(dispatch, { ...rsvp, phone: rsvp.phone.substring(1) });
     } else {
         dispatch(actionShowAlert('Except Email other fields are mandatory', 'warning'));
     }
@@ -221,7 +233,8 @@ const mapDispatchToProps = (dispatch) => {
         handlePlanChange: (value) => dispatch({ type: ACTION_SET_FIELD, fieldName: 'isComing', value }),
         handleMsgChange: (e) => dispatch({ type: ACTION_SET_FIELD, fieldName: 'msg', value: e.target.value }),
         handleSubmit: (rsvp) => callSaveRsvp(dispatch, rsvp),
-        handleAlertDismiss: () => dispatch({ type: ACTION_ALERT_DISMISS })
+        handleAlertDismiss: () => dispatch({ type: ACTION_ALERT_DISMISS }),
+        initialize: () => dispatch({ type: ACTION_INIT })
     })
 
 }

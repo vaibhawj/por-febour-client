@@ -1,6 +1,6 @@
 import {
     ACTION_SET_ACTIVE_TAB, ACTION_SET_FIELD, ACTION_SUBMIT_RSVP,
-    TAB_COUPLE, ACTION_ALERT_DISMISS, ACTION_SHOW_ALERT
+    TAB_COUPLE, ACTION_ALERT_DISMISS, ACTION_SHOW_ALERT, ACTION_INIT
 } from '../constants';
 
 const initialState = {
@@ -10,12 +10,12 @@ const initialState = {
         email: '',
         phone: '+91',
         isComing: '',
-        msg: '',
-        alertVisible: false,
-        alertMsg: '',
-        alertType: '',
-        isLoading: false
-    }
+        msg: ''
+    },
+    alertVisible: false,
+    alertMsg: '',
+    alertType: '',
+    isLoading: false
 }
 
 
@@ -40,10 +40,7 @@ const Reducer = (state = initialState, action) => {
         case ACTION_SUBMIT_RSVP:
             return {
                 ...state,
-                rsvp:{
-                    ...state.rsvp,
-                    isLoading: true
-                }
+                isLoading: true
             }
 
         case ACTION_ALERT_DISMISS:
@@ -55,15 +52,19 @@ const Reducer = (state = initialState, action) => {
             }
 
         case ACTION_SHOW_ALERT:
-           let newRsvp = action.alertType==='success'? initialState.rsvp : state.rsvp;
-           console.log(newRsvp)
             return {
                 ...state,
                 alertVisible: true,
                 alertType: action.alertType,
                 alertMsg: action.alertMsg,
+                isLoading: false
+            }
+
+        case ACTION_INIT:
+            return {
+                ...state,
                 rsvp: {
-                    ...newRsvp
+                    ...initialState.rsvp
                 }
             }
 
