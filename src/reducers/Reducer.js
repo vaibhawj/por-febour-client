@@ -1,6 +1,6 @@
 import {
     ACTION_SET_ACTIVE_TAB, ACTION_SET_FIELD, ACTION_SUBMIT_RSVP,
-    TAB_COUPLE, ACTION_ALERT_DISMISS, ACTION_SHOW_ALERT, ACTION_INIT
+    TAB_COUPLE, ACTION_ALERT_DISMISS, ACTION_SHOW_ALERT
 } from '../constants';
 
 const initialState = {
@@ -40,7 +40,10 @@ const Reducer = (state = initialState, action) => {
         case ACTION_SUBMIT_RSVP:
             return {
                 ...state,
-                isLoading: true
+                isLoading: true,
+                alertVisible: false,
+                alertMsg: '',
+                alertType: ''
             }
 
         case ACTION_ALERT_DISMISS:
@@ -58,14 +61,6 @@ const Reducer = (state = initialState, action) => {
                 alertType: action.alertType,
                 alertMsg: action.alertMsg,
                 isLoading: false
-            }
-
-        case ACTION_INIT:
-            return {
-                ...state,
-                rsvp: {
-                    ...initialState.rsvp
-                }
             }
 
         default: return state;

@@ -7,34 +7,31 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import {
     ACTION_SET_ACTIVE_TAB, ACTION_SET_FIELD, ACTION_SUBMIT_RSVP,
-    TAB_RSVP, ACTION_ALERT_DISMISS, ACTION_SHOW_ALERT, ACTION_INIT
+    TAB_RSVP, ACTION_ALERT_DISMISS, ACTION_SHOW_ALERT
 } from '../constants';
 import Phone from 'react-phone-input';
 import { PhoneNumberUtil } from 'google-libphonenumber';
 
 const hackForClearingFields = () => {
 
-    const isComingEle = document.getElementsByClassName('btn btn-default active')[0];
-    isComingEle.classList.remove('active');
+    window.location.reload();
+    // document.getElementsByClassName('btn btn-default active')[0].classList.remove('active');
 }
 
 class RSVPComp extends React.Component {
 
     componentWillMount() {
         this.props.setRoute(TAB_RSVP);
-       // this.props.initialize();
-        
     }
 
     render() {
         if (this.props.alertVisible && this.props.alertType === 'success') {
             setTimeout(function (self) {
-               // hackForClearingFields();
-
+                hackForClearingFields();
                 self.props.handleAlertDismiss();
             }, 3000, this);
         }
-        
+
         return (
             <div style={{ marginLeft: '2%', marginRight: '2%' }}>
                 <form>
@@ -160,7 +157,8 @@ const emailValidationState = (email) => {
         'success' : 'error';
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
+    //console.log(ownProps);
     return ({
         name: state.rsvp.name,
         email: state.rsvp.email,
@@ -233,8 +231,7 @@ const mapDispatchToProps = (dispatch) => {
         handlePlanChange: (value) => dispatch({ type: ACTION_SET_FIELD, fieldName: 'isComing', value }),
         handleMsgChange: (e) => dispatch({ type: ACTION_SET_FIELD, fieldName: 'msg', value: e.target.value }),
         handleSubmit: (rsvp) => callSaveRsvp(dispatch, rsvp),
-        handleAlertDismiss: () => dispatch({ type: ACTION_ALERT_DISMISS }),
-        initialize: () => dispatch({ type: ACTION_INIT })
+        handleAlertDismiss: () => dispatch({ type: ACTION_ALERT_DISMISS })
     })
 
 }

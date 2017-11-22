@@ -5,7 +5,6 @@ export const ACTION_SET_FIELD = 'SET_FIELD';
 export const ACTION_SUBMIT_RSVP = 'SUBMIT_RSVP';
 export const ACTION_ALERT_DISMISS = 'ALERT_DISMISS';
 export const ACTION_SHOW_ALERT = 'SHOW_ALERT';
-export const ACTION_INIT = 'INIT';
 
 export const TAB_COUPLE = 'Couple';
 export const TAB_WEDDING = 'Wedding';
