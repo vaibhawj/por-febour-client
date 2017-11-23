@@ -186,3 +186,7 @@
 .map-holder {
     background:url(../images/loader.gif) center center no-repeat;
 }
+
+.github-icon {
+    height: 1.6rem;
+}
