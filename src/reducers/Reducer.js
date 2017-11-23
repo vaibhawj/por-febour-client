@@ -1,6 +1,7 @@
 import {
     ACTION_SET_ACTIVE_TAB, ACTION_SET_FIELD, ACTION_SUBMIT_RSVP,
-    TAB_COUPLE, ACTION_ALERT_DISMISS, ACTION_SHOW_ALERT
+    TAB_COUPLE, ACTION_ALERT_DISMISS, ACTION_SHOW_ALERT, ACTION_INITIALIZE_RSVP,
+    ACTION_CHANGE_KEY
 } from '../constants';
 
 const initialState = {
@@ -17,9 +18,6 @@ const initialState = {
     alertType: '',
     isLoading: false
 }
-
-
-
 
 const Reducer = (state = initialState, action) => {
     //console.log(state);
@@ -47,11 +45,17 @@ const Reducer = (state = initialState, action) => {
             }
 
         case ACTION_ALERT_DISMISS:
+            const newRsvp = action.alertType === 'success' ? initialState.rsvp : state.rsvp;
+
             return {
                 ...state,
+                rsvp: {
+                    ...newRsvp
+                },
                 alertVisible: false,
                 alertMsg: '',
-                alertType: ''
+                alertType: '',
+                key: Math.random()
             }
 
         case ACTION_SHOW_ALERT:
@@ -61,6 +65,20 @@ const Reducer = (state = initialState, action) => {
                 alertType: action.alertType,
                 alertMsg: action.alertMsg,
                 isLoading: false
+            }
+
+        case ACTION_INITIALIZE_RSVP:
+            return {
+                ...state,
+                rsvp: {
+                    ...initialState.rsvp
+                }
+            }
+
+        case ACTION_CHANGE_KEY:
+            return {
+                ...state,
+                key: Math.random()
             }
 
         default: return state;

@@ -7,16 +7,11 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import {
     ACTION_SET_ACTIVE_TAB, ACTION_SET_FIELD, ACTION_SUBMIT_RSVP,
-    TAB_RSVP, ACTION_ALERT_DISMISS, ACTION_SHOW_ALERT
+    TAB_RSVP, ACTION_ALERT_DISMISS, ACTION_SHOW_ALERT, ACTION_INITIALIZE_RSVP,
+    ACTION_CHANGE_KEY
 } from '../constants';
 import Phone from 'react-phone-input';
 import { PhoneNumberUtil } from 'google-libphonenumber';
-
-const hackForClearingFields = () => {
-
-    window.location.reload();
-    // document.getElementsByClassName('btn btn-default active')[0].classList.remove('active');
-}
 
 class RSVPComp extends React.Component {
 
@@ -24,11 +19,15 @@ class RSVPComp extends React.Component {
         this.props.setRoute(TAB_RSVP);
     }
 
+    hackForClearingFields = (self) => {
+        self.props.changeKey();
+    }
+
     render() {
         if (this.props.alertVisible && this.props.alertType === 'success') {
             setTimeout(function (self) {
-                hackForClearingFields();
-                self.props.handleAlertDismiss();
+               // self.hackForClearingFields(self);
+                self.props.handleAlertDismiss(self.props.alertType);
             }, 3000, this);
         }
 
@@ -39,7 +38,7 @@ class RSVPComp extends React.Component {
                     <br />
 
                     <Collapse in={this.props.alertVisible}>
-                        <Alert bsStyle={this.props.alertType === '' ? 'info' : this.props.alertType} onDismiss={this.props.handleAlertDismiss}> {this.props.alertMsg}
+                        <Alert bsStyle={this.props.alertType === '' ? 'info' : this.props.alertType} onDismiss={() => this.props.handleAlertDismiss(this.props.alertType)}> {this.props.alertMsg}
                         </Alert>
                     </Collapse>
 
@@ -49,7 +48,7 @@ class RSVPComp extends React.Component {
 
                         <InputGroup>
                             <InputGroup.Addon><Glyphicon glyph="earphone" /></InputGroup.Addon>
-                            <Phone
+                            <Phone key = {this.props.key}
                                 defaultCountry={'in'} onChange={this.props.handlePhoneChange} value={this.props.phone}
                             />
                         </InputGroup>
@@ -178,7 +177,8 @@ const mapStateToProps = (state, ownProps) => {
         alertVisible: state.alertVisible,
         alertType: state.alertType,
         alertMsg: state.alertMsg,
-        isLoading: state.isLoading
+        isLoading: state.isLoading,
+        key: state.key
     })
 }
 
@@ -231,7 +231,9 @@ const mapDispatchToProps = (dispatch) => {
         handlePlanChange: (value) => dispatch({ type: ACTION_SET_FIELD, fieldName: 'isComing', value }),
         handleMsgChange: (e) => dispatch({ type: ACTION_SET_FIELD, fieldName: 'msg', value: e.target.value }),
         handleSubmit: (rsvp) => callSaveRsvp(dispatch, rsvp),
-        handleAlertDismiss: () => dispatch({ type: ACTION_ALERT_DISMISS })
+        handleAlertDismiss: (alertType) => dispatch({ type: ACTION_ALERT_DISMISS, alertType }),
+        initialize: () => dispatch({type: ACTION_INITIALIZE_RSVP }),
+        changeKey: () => dispatch({ type: ACTION_CHANGE_KEY})
     })
 
 }
