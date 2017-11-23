@@ -26,7 +26,9 @@ class LogisticsComp extends React.Component {
         return (
             <div style={{ marginLeft: '2%', marginRight: '2%' }} >
                 <p>It is not very far from Majestic railway station</p>
-                <div dangerouslySetInnerHTML={this.iframe()} />
+                <div className="map-holder">
+                    <div dangerouslySetInnerHTML={this.iframe()} />
+                </div>
             </div >
         );
     }

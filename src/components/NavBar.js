@@ -35,7 +35,7 @@ const NavBar = ({ activeTab }) => {
 
             <li className={activeTab === TAB_LOGISTICS ? activeTabClass : defaultTabClass}>
                 <NavLink activeClassName="active" to='/logistics'>
-                    <img src="img/logistics.png" className="tabIcon" alt="logistics" /><span className="hidden-xs">Logistics</span>
+                    <img src="img/logistics.png" className="tabIcon" alt="logistics" /><span className="hidden-xs">Venue</span>
                 </NavLink>
             </li>
         </ul>

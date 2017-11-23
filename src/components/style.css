@@ -182,3 +182,7 @@
     height: 34px !important;
     border-radius: 4px !important;
 }
+
+.map-holder {
+    background:url(../images/loader.gif) center center no-repeat;
+}
