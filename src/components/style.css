@@ -142,6 +142,7 @@
 
 .react-add-to-calendar__dropdown > ul > li {
     width: 15rem;
+    height: 3rem;
 }
 
 .react-add-to-calendar__button {
@@ -174,7 +175,7 @@
 }
 
 .country-list {
-    width: 28.5rem !important;
+    width: 20rem !important;
 }
 
 .react-tel-input > input.form-control {
