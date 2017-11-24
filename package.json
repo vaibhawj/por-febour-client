@@ -61,8 +61,9 @@
     "fsevents": "*"
   },
   "scripts": {
-    "start": "serve -s build",
     "build": "node scripts/build.js",
+    "postinstall": "npm run build",
+    "start": "serve -s build",
     "dev": "node scripts/start.js",
     "test": "node scripts/test.js --env=jsdom"
   },
