@@ -35,6 +35,7 @@
     margin-top: 1rem;
 }
 
+#nav { display: table; }
 .nav-tabs { border-bottom: 2px solid #DDD; }
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { border-width: 0; }
 .nav-tabs > li > a { border: none; color: #666; }
@@ -79,10 +80,26 @@
     height: auto;
 }
 
+@media only screen and (min-width: 768px) {
+    #nav { width: 100% }
+}
+
 @media only screen and (max-width: 414px) {
     .tabIcon {
-        width: 4.4rem;
+        width: 4rem;
         height: auto;
+    }
+    .titlebar .bride-name {
+        font-size: 4.8rem;
+    }
+    .titlebar .groom-name {
+        font-size: 2.9rem;
+    }
+    .titlebar .wedding-date {
+        font-size: 1.7rem;
+    }
+    .saveDate {
+        font-size: 1.5rem;
     }
 }
 
@@ -91,12 +108,17 @@
         width: 3.7rem;
         height: auto;
     }
-}
-
-@media only screen and (max-width: 375px) {
-    .tabIcon {
-        width: 3.7rem;
-        height: auto;
+    .titlebar .bride-name {
+        font-size: 4.5rem;
+    }
+    .titlebar .groom-name {
+        font-size: 2.6rem;
+    }
+    .titlebar .wedding-date {
+        font-size: 1.6rem;
+    }
+    .saveDate {
+        font-size: 1.4rem;
     }
 }
 
@@ -105,12 +127,36 @@
         width: 3.4rem;
         height: auto;
     }
+    .titlebar .bride-name {
+        font-size: 4.5rem;
+    }
+    .titlebar .groom-name {
+        font-size: 2.6rem;
+    }
+    .titlebar .wedding-date {
+        font-size: 1.5rem;
+    }
+    .saveDate {
+        font-size: 1.2rem;
+    }
 }
 
 @media only screen and (max-width: 320px) {
     .tabIcon {
         width: 2.6rem;
         height: auto;
+    }
+    .titlebar .bride-name {
+        font-size: 4rem;
+    }
+    .titlebar .groom-name {
+        font-size: 2.4rem;
+    }
+    .titlebar .wedding-date {
+        font-size: 1.5rem;
+    }
+    .saveDate {
+        font-size: 1.2rem;
     }
 }
 

@@ -8,7 +8,7 @@ const defaultTabClass = 'rounded';
 
 const NavBar = ({ activeTab }) => {
     return (
-        <ul className="nav nav-tabs" role="tablist">
+        <ul className="nav nav-tabs" role="tablist" id="nav">
             <li className={activeTab === TAB_COUPLE ? activeTabClass : defaultTabClass}>
                 <NavLink activeClassName="active" to='/couple'>
                     <img src="img/couple.png" className="tabIcon" alt="couple" /><span className="hidden-xs">Our Story</span>
