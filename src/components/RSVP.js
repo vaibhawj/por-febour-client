@@ -19,14 +19,9 @@ class RSVPComp extends React.Component {
         this.props.setRoute(TAB_RSVP);
     }
 
-    hackForClearingFields = (self) => {
-        self.props.changeKey();
-    }
-
     render() {
         if (this.props.alertVisible && this.props.alertType === 'success') {
             setTimeout(function (self) {
-               // self.hackForClearingFields(self);
                 self.props.handleAlertDismiss(self.props.alertType);
             }, 3000, this);
         }
@@ -231,9 +226,7 @@ const mapDispatchToProps = (dispatch) => {
         handlePlanChange: (value) => dispatch({ type: ACTION_SET_FIELD, fieldName: 'isComing', value }),
         handleMsgChange: (e) => dispatch({ type: ACTION_SET_FIELD, fieldName: 'msg', value: e.target.value }),
         handleSubmit: (rsvp) => callSaveRsvp(dispatch, rsvp),
-        handleAlertDismiss: (alertType) => dispatch({ type: ACTION_ALERT_DISMISS, alertType }),
-        initialize: () => dispatch({type: ACTION_INITIALIZE_RSVP }),
-        changeKey: () => dispatch({ type: ACTION_CHANGE_KEY})
+        handleAlertDismiss: (alertType) => dispatch({ type: ACTION_ALERT_DISMISS, alertType })
     })
 
 }
