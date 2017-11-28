@@ -15,11 +15,10 @@ class CoupleCarousel extends React.Component {
         axios.get('https://res.cloudinary.com/dqixonz2g/image/list/carousel.json')
             .then(res => {
                 const posts = res.data.resources;
-                let images = [];
                 let iD = 0;
-                posts.map(post => {
-                    images.push({ url: `https://res.cloudinary.com/dqixonz2g/image/upload/w_900,h_500,c_fill,g_faces/v${post.version}/${post.public_id}.${post.format}`, caption: post.context.custom.caption, id: iD++ });
-                });
+                let images = (posts.map(post => {
+                    return ({ url: `https://res.cloudinary.com/dqixonz2g/image/upload/w_900,h_500,c_fill,g_faces/v${post.version}/${post.public_id}.${post.format}`, caption: post.context.custom.caption, id: iD++ });
+                }));
 
                 this.setState({ images });
             });
@@ -34,7 +33,7 @@ class CoupleCarousel extends React.Component {
                     {
                         this.state.images.map(img => {
                             return (<Carousel.Item key={img.id}>
-                                <img width="100%" height="200" src={img.url} alt={img.caption}/>
+                                <img width="100%" height="200" src={img.url} alt={img.caption} />
                                 <Carousel.Caption >
                                     <p>{img.caption}</p>
                                 </Carousel.Caption>

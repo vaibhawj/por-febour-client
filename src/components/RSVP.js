@@ -7,8 +7,7 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import {
     ACTION_SET_ACTIVE_TAB, ACTION_SET_FIELD, ACTION_SUBMIT_RSVP,
-    TAB_RSVP, ACTION_ALERT_DISMISS, ACTION_SHOW_ALERT, ACTION_INITIALIZE_RSVP,
-    ACTION_CHANGE_KEY
+    TAB_RSVP, ACTION_ALERT_DISMISS, ACTION_SHOW_ALERT
 } from '../constants';
 import Phone from 'react-phone-input';
 import { PhoneNumberUtil } from 'google-libphonenumber';
