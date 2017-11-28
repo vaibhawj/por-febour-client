@@ -12,6 +12,8 @@ import {
 import Phone from 'react-phone-input';
 import { PhoneNumberUtil } from 'google-libphonenumber';
 
+const saveRsvpUrl = process.env.saveRsvpUrl;
+
 class RSVPComp extends React.Component {
 
     componentWillMount() {
@@ -184,7 +186,7 @@ const actionShowAlert = (alertMsg, alertType) => {
         alertType
     }
 }
-const saveRsvpUrl = "https://api-rsvp.herokuapp.com/saveRsvp/";
+
 const submitRsvp = async (dispatch, rsvp) => {
 
     let action = await axios.post(saveRsvpUrl, {
