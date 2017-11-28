@@ -80,6 +80,10 @@
     height: auto;
 }
 
+.ganesha {
+    margin-top: -1rem;
+}
+
 @media only screen and (min-width: 768px) {
     #nav { width: 100% }
 }
