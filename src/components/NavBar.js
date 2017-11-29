@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { TAB_COUPLE, TAB_WEDDING, TAB_RSVP, TAB_LOGISTICS, TAB_PHOTOS } from '../constants';
+import { TAB_COUPLE, TAB_WEDDING, TAB_RSVP, TAB_LOGISTICS, TAB_WISHES } from '../constants';
 
 const activeTabClass = 'rounded active';
 const defaultTabClass = 'rounded';
@@ -17,13 +17,13 @@ const NavBar = ({ activeTab }) => {
 
             <li className={activeTab === TAB_WEDDING ? activeTabClass : defaultTabClass}>
                 <NavLink activeClassName="active" to='/wedding'>
-                    <img src="img/wedding.png" className="tabIcon" alt="wedding" /><span className="hidden-xs">The Wedding</span>
+                    <img src="img/wedding.png" className="tabIcon" alt="wedding" /><span className="hidden-xs"><i className="fa fa-hashtag"></i> Wedding</span>
                 </NavLink>
             </li>
 
-            <li className={activeTab === TAB_PHOTOS ? activeTabClass : defaultTabClass}>
-                <NavLink activeClassName="active" to='/photos'>
-                    <img src="img/photos.png" className="tabIcon" alt="photos" /><span className="hidden-xs"> Photos</span>
+            <li className={activeTab === TAB_WISHES ? activeTabClass : defaultTabClass}>
+                <NavLink activeClassName="active" to='/wishes'>
+                    <img src="img/wishes.png" className="tabIcon" alt="wishes" /><span className="hidden-xs"> Wishes</span>
                 </NavLink>
             </li>
 

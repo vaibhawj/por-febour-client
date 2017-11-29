@@ -1,18 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { ACTION_SET_ACTIVE_TAB, TAB_PHOTOS } from '../constants';
+import { ACTION_SET_ACTIVE_TAB, TAB_WISHES } from '../constants';
 
 
-class PhotosComp extends React.Component {
+class WishesComp extends React.Component {
 
     componentWillMount() {
-        this.props.setRoute(TAB_PHOTOS);
+        this.props.setRoute(TAB_WISHES);
     }
 
     render() {
         return (
             <div style={{ marginLeft: '2%', marginRight: '2%' }}>
-                <ul className="juicer-feed" data-feed-id="vaibhawj"></ul>
+                Your wishes will be listed here
             </div>
         );
     }
@@ -29,6 +29,6 @@ const mapDispatchToProps = (dispatch) => {
 
 }
 
-const Photos = connect(mapStateToProps, mapDispatchToProps)(PhotosComp);
+const Wishes = connect(mapStateToProps, mapDispatchToProps)(WishesComp);
 
-export default Photos;
+export default Wishes;

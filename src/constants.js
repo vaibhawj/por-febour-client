@@ -12,4 +12,4 @@ export const TAB_COUPLE = 'Couple';
 export const TAB_WEDDING = 'Wedding';
 export const TAB_RSVP = 'RSVP';
 export const TAB_LOGISTICS = 'Logistics';
-export const TAB_PHOTOS = 'Photos';
+export const TAB_WISHES = 'Wishes';

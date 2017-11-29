@@ -12,7 +12,7 @@ import RSVP from './RSVP';
 import Logistics from './Logistics';
 import NoMatch from './NoMatch';
 import Header from './Header';
-import Photos from './Photos';
+import Wishes from './Wishes';
 import Footer from './Footer';
 
 class App extends React.Component {
@@ -28,7 +28,7 @@ class App extends React.Component {
                             <Redirect exact from="/" to="/couple" />
                             <Route path="/couple" component={Couple} />
                             <Route path="/wedding" component={Wedding} />
-                            <Route path="/photos" component={Photos} />
+                            <Route path="/wishes" component={Wishes} />
                             <Route path="/rsvp" component={RSVP} />
                             <Route path="/logistics" component={Logistics} />
                             <Route component={NoMatch} />
