@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { ACTION_SET_ACTIVE_TAB, TAB_WISHES, ACTION_CHANGE_KEY } from '../constants';
+import { ACTION_SET_ACTIVE_TAB, TAB_WISHES } from '../constants';
 import FacebookProvider, { Comments } from 'react-facebook';
 
-const FBAppId = process.env.FBAppId;
+const FBAppId = process.env.FBAppId || "1234";
 
 class WishesComp extends React.Component {
 
