@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { ACTION_SET_ACTIVE_TAB, TAB_WISHES } from '../constants';
+import { ACTION_SET_ACTIVE_TAB, TAB_WISHES, ACTION_CHANGE_KEY } from '../constants';
+import FacebookProvider, { Comments } from 'react-facebook';
 
 
 class WishesComp extends React.Component {
