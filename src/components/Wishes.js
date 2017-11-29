@@ -7,12 +7,18 @@ class WishesComp extends React.Component {
 
     componentWillMount() {
         this.props.setRoute(TAB_WISHES);
+
+        const script = document.createElement("script");
+        script.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.11';
+        script.async = true;
+        document.body.appendChild(script);
     }
 
     render() {
         return (
             <div style={{ marginLeft: '2%', marginRight: '2%' }}>
-                Your wishes will be listed here
+                <div id="fb-root"></div>
+                <div className="fb-comments" data-href="https://sush-and-vaibhaw.herokuapp.com/wishes" data-numposts="5"></div>
             </div>
         );
     }
