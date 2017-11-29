@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { ACTION_SET_ACTIVE_TAB, TAB_WISHES, ACTION_CHANGE_KEY } from '../constants';
 import FacebookProvider, { Comments } from 'react-facebook';
 
+const FBAppId = process.env.FBAppId;
 
 class WishesComp extends React.Component {
 
@@ -13,7 +14,7 @@ class WishesComp extends React.Component {
     render() {
         return (
             <div style={{ marginLeft: '2%', marginRight: '2%' }}>
-                <FacebookProvider appId="134669920573096">
+                <FacebookProvider appId={FBAppId}>
                     <Comments href="https://sush-and-vaibhaw.herokuapp.com/wishes" />
                 </FacebookProvider>
             </div>
