@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { ACTION_SET_ACTIVE_TAB, TAB_WISHES } from '../constants';
 import FacebookProvider, { Comments } from 'react-facebook';
 
-const FBAppId = process.env.FBAppId || "134669920573096";
+const FBAppId = "134669920573096";
 
 class WishesComp extends React.Component {
 

@@ -12,7 +12,7 @@ import {
 import Phone from 'react-phone-input';
 import { PhoneNumberUtil } from 'google-libphonenumber';
 
-const saveRsvpUrl = process.env.saveRsvpUrl;
+const saveRsvpUrl = "https://api-rsvp.herokuapp.com/saveRsvp/";
 
 class RSVPComp extends React.Component {
 
