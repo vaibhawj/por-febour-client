@@ -5,6 +5,12 @@ import FacebookProvider, { Comments } from 'react-facebook';
 
 const FBAppId = "134669920573096";
 
+window.onload = function() {
+    window.FB.Event.subscribe('xfbml.render', function(response) {
+        document.getElementById('fb-loader').style.display = 'none';
+    });
+};
+
 class WishesComp extends React.Component {
 
     componentWillMount() {
@@ -14,6 +20,7 @@ class WishesComp extends React.Component {
     render() {
         return (
             <div style={{ marginLeft: '2%', marginRight: '2%' }}>
+                <span id="fb-loader" style={{marginLeft: '47%'}}><img src="img/fb-spinner.gif" className="tabIcon" alt="Loading..." /></span>
                 <FacebookProvider appId={ FBAppId }>
                     <Comments href="https://sush-and-vaibhaw.herokuapp.com/wishes" />
                 </FacebookProvider>
