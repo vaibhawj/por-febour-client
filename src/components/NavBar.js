@@ -17,7 +17,7 @@ const NavBar = ({ activeTab }) => {
 
             <li className={activeTab === TAB_WEDDING ? activeTabClass : defaultTabClass}>
                 <NavLink activeClassName="active" to='/wedding'>
-                    <img src="img/wedding.png" className="tabIcon" alt="wedding" /><span className="hidden-xs"><i className="fa fa-hashtag"></i> Wedding</span>
+                    <img src="img/wedding.png" className="tabIcon" alt="wedding" /><span className="hidden-xs"><i className="fa fa-hashtag"></i>Wedding</span>
                 </NavLink>
             </li>
 
