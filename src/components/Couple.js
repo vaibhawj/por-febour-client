@@ -17,8 +17,7 @@ class CoupleComp extends React.Component {
                         <CoupleCarousel />
                     </div>
                     <div className="col-xs-12 col-sm-6">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel, malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue, placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci semper, rhoncus ligula. Vivamus scelerisque.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel, malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue, placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci semper, rhoncus ligula. Vivamus scelerisque.</p>
+                        <p>Thank you for visiting our wedding website. We are truly blessed in every sense to have such a wonderful family and friends who have been so supportive throughout our lives. We love you all dearly for being there with us at each step and we can't wait to share our special day with you. We hope that all the information you will need is provided on our wed-app. Please bless us with your gracious presence or comments on our wed-app if you wont be able to join us. Hope to see you there!</p>
                     </div>
                 </div>
             </div>
