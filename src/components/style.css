@@ -19,7 +19,7 @@
     font-size: 6rem;
     line-height: 100%;
     width: 100%;
-    color: orchid;
+    color: slategrey;
 }
 
 .titlebar .groom-name {
@@ -27,7 +27,7 @@
     font-size: 3.7rem;
     line-height: 100%;
     width: 100%;
-    color: deepskyblue;
+    color: slategrey;
 }
 
 .titlebar .wedding-date {
@@ -35,6 +35,7 @@
     font-size: 1.3em;
     margin-bottom: 0rem;
     margin-top: 1rem;
+    color: steelblue;
 }
 
 #nav { display: table; }
@@ -186,6 +187,7 @@
     left: 2rem;
     width: max-content;
     font-size: 1.7rem;
+    border-color: steelblue;
 }
 
 .react-add-to-calendar__dropdown > ul {

@@ -12,7 +12,7 @@ const event = {
 }
 
 const listItems = [{ apple: "Apple" }, { google: "Google" }, { outlook: "Outlook" }, { outlookcom: "Outlook.com" }, { yahoo: "Yahoo" }];
-const dateHtml = `<span><!-- react-text: 16 --> ${date}<!-- /react-text --><i id="saveDate" class="glyphicon glyphicon-calendar saveDate animationActive"></i></span>`;
+const dateHtml = `<span class="wedding-date"><!-- react-text: 16 --> ${date}<!-- /react-text --><i id="saveDate" class="glyphicon glyphicon-calendar saveDate animationActive"></i></span>`;
 const tooltip = (
     <Tooltip id="tooltip">Click to mark the date!</Tooltip>
 );
@@ -37,7 +37,7 @@ class TitleBar extends React.Component {
                 <span className="groom-name">&nbsp;
                     <span><img src="img/ganesha.png" className="tabIcon ganesha" alt="&amp;" /></span> Vaibhaw
                 </span>
-                <div className="wedding-date" onClick={handleClick}>
+                <div onClick={handleClick}>
                     <OverlayTrigger placement="right" overlay={tooltip}>
                         <span>
                             <AddToCalendar event={event} buttonLabel={date}
