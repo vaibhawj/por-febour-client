@@ -6,14 +6,14 @@ import FacebookProvider, { Comments } from 'react-facebook';
 const FBAppId = "134669920573096";
 
 function checkFbIsRendered() {
-    if(document.getElementsByClassName('fb-comments') &&
-    document.getElementsByClassName('fb-comments')[0] &&
-    document.getElementsByClassName('fb-comments')[0].attributes &&
-    document.getElementsByClassName('fb-comments')[0].attributes['fb-xfbml-state'] &&
-    document.getElementsByClassName('fb-comments')[0].attributes['fb-xfbml-state'].value === 'rendered'){
+    if (document.getElementsByClassName('fb-comments') &&
+        document.getElementsByClassName('fb-comments')[0] &&
+        document.getElementsByClassName('fb-comments')[0].attributes &&
+        document.getElementsByClassName('fb-comments')[0].attributes['fb-xfbml-state'] &&
+        document.getElementsByClassName('fb-comments')[0].attributes['fb-xfbml-state'].value === 'rendered') {
         document.getElementById('fb--spinner').style.display = 'none';
     } else {
-       window.requestAnimationFrame(checkFbIsRendered);
+        window.requestAnimationFrame(checkFbIsRendered);
     }
 }
 
