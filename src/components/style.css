@@ -18,14 +18,16 @@
     font-family: 'EdwardianScrAltITCTT';
     font-size: 6rem;
     line-height: 100%;
-    width: 100%; 
+    width: 100%;
+    color: orchid;
 }
 
 .titlebar .groom-name {
     font-family: 'FuturaLTBook';
     font-size: 3.7rem;
     line-height: 100%;
-    width: 100%; 
+    width: 100%;
+    color: deepskyblue;
 }
 
 .titlebar .wedding-date {
