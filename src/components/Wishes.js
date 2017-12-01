@@ -26,6 +26,7 @@ class WishesComp extends React.Component {
     render() {
         return (
             <div style={{ marginLeft: '2%', marginRight: '2%' }}>
+                <p>Put your lovely wishes here. We are so excited to read them all.</p>
                 <span id="fb--spinner"><img src="img/fb-spinner.gif" className="fb--spinner" alt="Loading" /></span>
                 <FacebookProvider appId={FBAppId}>
                     <Comments href="https://sush-and-vaibhaw.herokuapp.com/wishes" />
