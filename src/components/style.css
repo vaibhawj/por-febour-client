@@ -183,7 +183,6 @@
 }
 
 .react-add-to-calendar__dropdown {
-    padding: 5px 0px 5px 4px;
     z-index: 3;
     left: 2rem;
     width: max-content;
@@ -199,6 +198,13 @@
 .react-add-to-calendar__dropdown > ul > li {
     width: 15rem;
     height: 3rem;
+    border-bottom-color: #99341e;
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
+}
+
+.react-add-to-calendar__dropdown > ul :last-child {
+    border-bottom: none;
 }
 
 .react-add-to-calendar__button {
