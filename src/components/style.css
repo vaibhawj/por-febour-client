@@ -33,7 +33,7 @@
 .titlebar .wedding-date {
     font-family: 'FuturaLTBook';
     font-size: 1.3em;
-    color: dimgrey;
+    color: turquoise;
 }
 
 .wedding-date-wrapper {
@@ -42,7 +42,7 @@
 }
 
 .saveDate {
-    color: #4284f4;
+    color: brown;
     font-size: 1.7rem;
     margin-left: 1rem;
 }
