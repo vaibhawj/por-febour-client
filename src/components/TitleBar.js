@@ -37,7 +37,7 @@ class TitleBar extends React.Component {
                 <span className="groom-name">&nbsp;
                     <span><img src="img/ganesha.png" className="tabIcon ganesha" alt="&amp;" /></span> Vaibhaw
                 </span>
-                <div onClick={handleClick}>
+                <div onClick={handleClick} className="wedding-date-wrapper">
                     <OverlayTrigger placement="right" overlay={tooltip}>
                         <span>
                             <AddToCalendar event={event} buttonLabel={date}

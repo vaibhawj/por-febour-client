@@ -16,7 +16,7 @@
 
 .titlebar .bride-name {
     font-family: 'EdwardianScrAltITCTT';
-    font-size: 6rem;
+    font-size: 5rem;
     line-height: 100%;
     width: 100%;
     color: brown;
@@ -24,7 +24,7 @@
 
 .titlebar .groom-name {
     font-family: 'FuturaLTBook';
-    font-size: 3.7rem;
+    font-size: 3.2rem;
     line-height: 100%;
     width: 100%;
     color: brown;
@@ -33,18 +33,26 @@
 .titlebar .wedding-date {
     font-family: 'FuturaLTBook';
     font-size: 1.3em;
-    font-weight: bold;
-    margin-bottom: 0rem;
-    margin-top: 1rem;
-    color: turquoise;
+    color: dimgrey;
+}
+
+.wedding-date-wrapper {
+    margin-top: 0.5rem;
+    margin-bottom: -0.5rem;
+}
+
+.saveDate {
+    color: #4284f4;
+    font-size: 1.7rem;
+    margin-left: 1rem;
 }
 
 #nav { display: table; }
 .nav-tabs { border-bottom: 2px solid #DDD; }
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { border-width: 0; }
-.nav-tabs > li > a { border: none; color: #99341e; }
+.nav-tabs > li > a { border: none; color: #888888; }
 .nav-tabs > li.active > a, .nav-tabs > li > a:hover { border: none; color: #4285F4 !important; background: transparent; }
-.nav-tabs > li.active > a::after { content: ""; background: #4285F4; height: 2px; position: absolute; width: 100%; left: 0px; bottom: -1px; transition: all 250ms ease 0s; transform: scale(0); }
+.nav-tabs > li.active > a::after { content: ""; background: #4285F4; height: 2px; position: absolute; width: 100%; left: 0px; bottom: -2px; transition: all 250ms ease 0s; transform: scale(0); }
 .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after { transform: scale(1); }
 .nav>li>a:focus, .nav>li>a:hover { background: transparent }
 .tab-nav > li > a::after { background: #21527d none repeat scroll 0% 0%; color: #fff; }
@@ -98,7 +106,7 @@
 
 @media only screen and (max-width: 768px) {
     .tabIcon {
-        width: 4rem;
+        width: 3.5rem;
         height: auto;
     }
     .titlebar .bride-name {
@@ -117,14 +125,14 @@
 
 @media only screen and (max-width: 414px) {
     .tabIcon {
-        width: 3.9rem;
+        width: 3rem;
         height: auto;
     }
     .titlebar .bride-name {
-        font-size: 4.8rem;
+        font-size: 4.6rem;
     }
     .titlebar .groom-name {
-        font-size: 2.9rem;
+        font-size: 2.8rem;
     }
     .titlebar .wedding-date {
         font-size: 1.7rem;
@@ -136,7 +144,7 @@
 
 @media only screen and (max-width: 375px) {
     .tabIcon {
-        width: 3.7rem;
+        width: 2.9rem;
         height: auto;
     }
     .titlebar .bride-name {
@@ -155,14 +163,14 @@
 
 @media only screen and (max-width: 360px) {
     .tabIcon {
-        width: 3.4rem;
+        width: 2.7rem;
         height: auto;
     }
     .titlebar .bride-name {
-        font-size: 4.5rem;
+        font-size: 4rem;
     }
     .titlebar .groom-name {
-        font-size: 2.6rem;
+        font-size: 2.5rem;
     }
     .titlebar .wedding-date {
         font-size: 1.5rem;
@@ -178,10 +186,10 @@
         height: auto;
     }
     .titlebar .bride-name {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
     .titlebar .groom-name {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
     }
     .titlebar .wedding-date {
         font-size: 1.5rem;
@@ -243,11 +251,6 @@
 .animationActive {
     animation: blinker 3s linear infinite;
     animation-delay: 2s;
-}
-.saveDate {
-    color: brown;
-    font-size: 1.7rem;
-    margin-left: 1rem;
 }
 
 .sticky-inner-wrapper {
