@@ -25,7 +25,7 @@ class LogisticsComp extends React.Component {
     render() {
         return (
             <div style={{ marginLeft: '2%', marginRight: '2%' }} >
-                <p>Here is how you get to the place. Don't be late! 😁</p>
+                <p>Here is how you get to the place. Don't be late! <span role="img" aria-label="">😁</span></p>
                 <div className="map-holder">
                     <div dangerouslySetInnerHTML={this.iframe()} />
                 </div>

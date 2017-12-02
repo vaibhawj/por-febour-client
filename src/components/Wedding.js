@@ -11,7 +11,7 @@ class WeddingComp extends React.Component {
     render() {
         return (
             <div style={{ marginLeft: '2%', marginRight: '2%' }}>
-                <p>Watch this space for the latest uploads from events. Yeah, let's hope for that 😎</p>
+                <p>Watch this space for the latest uploads from events. Yeah, let's hope for that <span role="img" aria-label="">😎</span></p>
                 <ul className="juicer-feed" data-feed-id="vaibhawj"></ul>
             </div>
         );
