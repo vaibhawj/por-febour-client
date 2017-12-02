@@ -290,3 +290,7 @@
     font-family: monospace;
     font-size: xx-small;
 }
+
+.github {
+    margin-top: -1px;
+}

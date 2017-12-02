@@ -30,7 +30,7 @@ class RSVPComp extends React.Component {
         return (
             <div style={{ marginLeft: '2%', marginRight: '2%' }}>
                 <form>
-                    <span >Please complete the form below to let us know if you will be joining us in Bengaluru</span><br />
+                    <span><p>How about letting us know your plan?! It will help us plan better 🙂</p></span>
                     <br />
 
                     <Collapse in={this.props.alertVisible}>
