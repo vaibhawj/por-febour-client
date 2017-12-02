@@ -48,8 +48,11 @@
 .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after { transform: scale(1); }
 .nav>li>a:focus, .nav>li>a:hover { background: transparent }
 .tab-nav > li > a::after { background: #21527d none repeat scroll 0% 0%; color: #fff; }
+.nav > li { display: table-cell; }
+.nav-tabs > li { float: none; }
+.nav-tabs > li > a { text-align: center; }
 .tab-pane { padding: 15px 0; }
-.tab-content{padding:20px}
+.tab-content { padding:20px }
 
 .spinning.glyphicon {
   margin-right: 7px;
@@ -89,13 +92,32 @@
     margin-right: -0.4rem;
 }
 
-@media only screen and (min-width: 768px) {
-    #nav { width: 100% }
+#nav {
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .tabIcon {
+        width: 4rem;
+        height: auto;
+    }
+    .titlebar .bride-name {
+        font-size: 4.8rem;
+    }
+    .titlebar .groom-name {
+        font-size: 2.9rem;
+    }
+    .titlebar .wedding-date {
+        font-size: 1.7rem;
+    }
+    .saveDate {
+        font-size: 1.5rem;
+    }
 }
 
 @media only screen and (max-width: 414px) {
     .tabIcon {
-        width: 4rem;
+        width: 3.9rem;
         height: auto;
     }
     .titlebar .bride-name {
