@@ -19,7 +19,7 @@
     font-size: 6rem;
     line-height: 100%;
     width: 100%;
-    color: slategrey;
+    color: brown;
 }
 
 .titlebar .groom-name {
@@ -27,15 +27,16 @@
     font-size: 3.7rem;
     line-height: 100%;
     width: 100%;
-    color: slategrey;
+    color: brown;
 }
 
 .titlebar .wedding-date {
     font-family: 'FuturaLTBook';
     font-size: 1.3em;
+    font-weight: bold;
     margin-bottom: 0rem;
     margin-top: 1rem;
-    color: steelblue;
+    color: turquoise;
 }
 
 #nav { display: table; }
@@ -216,7 +217,7 @@
     animation-delay: 2s;
 }
 .saveDate {
-    color: #4285F4;
+    color: brown;
     font-size: 1.7rem;
     margin-left: 1rem;
 }
