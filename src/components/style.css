@@ -33,6 +33,7 @@
 .titlebar .wedding-date {
     font-family: 'FuturaLTBook';
     font-size: 1.3em;
+    font-weight: bold;
     color: turquoise;
 }
 
