@@ -35,7 +35,7 @@ class TitleBar extends React.Component {
                 </span>
                 <div onClick={handleClick} className="wedding-date-wrapper">
                     <Tooltip id="wedding-date-tooltip" place="top" type="dark" effect="solid">
-                        <span>Click to mark the date</span>
+                        <span>Click to mark</span>
                     </Tooltip>
                     <span data-tip data-for='wedding-date-tooltip'>
                         <AddToCalendar event={event} buttonLabel={date}
