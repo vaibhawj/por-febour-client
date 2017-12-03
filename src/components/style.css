@@ -61,7 +61,7 @@
 .nav-tabs > li { float: none; }
 .nav-tabs > li > a { text-align: center; }
 .tab-pane { padding: 15px 0; }
-.tab-content { padding:20px }
+.tab-content { padding: 1rem 0rem 1rem 0rem }
 
 .spinning.glyphicon {
   margin-right: 7px;
