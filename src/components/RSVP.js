@@ -31,7 +31,6 @@ class RSVPComp extends React.Component {
             <div style={{ marginLeft: '2%', marginRight: '2%' }}>
                 <form>
                     <span><p>How about letting us know your plan?! It will help us plan better <span role="img" aria-label="">🙂</span></p></span>
-                    <br />
 
                     <Collapse in={this.props.alertVisible}>
                         <Alert bsStyle={this.props.alertType === '' ? 'info' : this.props.alertType} onDismiss={() => this.props.handleAlertDismiss(this.props.alertType)}> {this.props.alertMsg}
