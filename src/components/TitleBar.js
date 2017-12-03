@@ -1,6 +1,6 @@
 import React from 'react';
 import AddToCalendar from 'react-add-to-calendar';
-import { Tooltip, OverlayTrigger } from 'react-bootstrap';
+import Tooltip from 'react-tooltip'
 
 const date = "24th FEB, 2018";
 const event = {
@@ -13,10 +13,6 @@ const event = {
 
 const listItems = [{ apple: "Apple" }, { google: "Google" }, { outlook: "Outlook" }, { outlookcom: "Outlook.com" }, { yahoo: "Yahoo" }];
 const dateHtml = `<span class="wedding-date"><!-- react-text: 16 --> ${date}<!-- /react-text --><i id="saveDate" class="glyphicon glyphicon-calendar saveDate animationActive"></i></span>`;
-const tooltip = (
-    <Tooltip id="tooltip">Click to mark the date!</Tooltip>
-);
-
 
 const handleClick = () => {
     const calendarIcon = document.getElementById('saveDate');
@@ -38,13 +34,14 @@ class TitleBar extends React.Component {
                     <span><img src="img/ganesha.png" className="tabIcon ganesha" alt="&amp;" /></span> Vaibhaw
                 </span>
                 <div onClick={handleClick} className="wedding-date-wrapper">
-                    <OverlayTrigger placement="right" overlay={tooltip}>
-                        <span>
-                            <AddToCalendar event={event} buttonLabel={date}
-                                listItems={listItems} buttonTemplate="textOnly"
-                            />
-                        </span>
-                    </OverlayTrigger>
+                    <Tooltip id="wedding-date-tooltip" place="top" type="dark" effect="solid">
+                        <span>Click to mark the date</span>
+                    </Tooltip>
+                    <span data-tip data-for='wedding-date-tooltip'>
+                        <AddToCalendar event={event} buttonLabel={date}
+                            listItems={listItems} buttonTemplate="textOnly"
+                        />
+                    </span>
                 </div>
 
             </header>
