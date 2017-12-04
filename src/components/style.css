@@ -295,3 +295,9 @@
 .github {
     margin-top: -1px;
 }
+
+.cityIcon {
+    width: 2rem;
+    height: auto;
+    margin-top: -0.5rem;
+}
