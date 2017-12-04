@@ -17,7 +17,10 @@ class CoupleComp extends React.Component {
                         <CoupleCarousel />
                     </div>
                     <div className="col-xs-12 col-sm-6">
-                        <p>Thank you for visiting our wedding website. We are truly blessed in every sense to have such a wonderful family and friends who have been so supportive throughout our lives. We love you all dearly for being there with us at each step and we can't wait to share our special day with you. We hope that all the information you will need is provided on our wed-app. Please bless us with your gracious presence or comments on our wed-app if you wont be able to join us. Hope to see you there!</p>
+                        <p>They met in College 10 years back and hit it off pretty fast</p>
+                        <p>Girl is nerdy 🤓 . But, she would rather boast off her Running feats 🏃🏻‍ and sports medals than her high scores. She is moody.</p>
+                        <p>Boy has always been looked upon as sincere and silent type. But, she knows the truth 😈 . He is foody.</p>
+                        <p>He tries really hard keeping up with her mood swings. In return, she gives the good company in his food swings even though she is a Calorie calculator.</p>
                     </div>
                 </div>
             </div>
