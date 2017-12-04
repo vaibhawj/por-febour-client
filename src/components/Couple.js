@@ -17,10 +17,10 @@ class CoupleComp extends React.Component {
                         <CoupleCarousel />
                     </div>
                     <div className="col-xs-12 col-sm-6">
-                        <p>They met in College 10 years back and hit it off pretty fast</p>
-                        <p>Girl is nerdy <span role="img" aria-label="">🤓</span>. But, she would rather boast off her Running feats <span role="img" aria-label="">🏃🏻‍</span> and sports medals than her high scores. She is moody.</p>
-                        <p>Boy has always been looked upon as sincere and silent type. But, she knows the truth that he is plain shy <span role="img" aria-label="">😈</span>. He is foody.</p>
-                        <p>He tries really hard keeping up with her mood swings. In return, she gives the good company in his food swings even though she is a Calorie calculator.</p>
+                        <p>It all started 10 years back at the dumbest phase of life and career. They never knew it will go this far. And marriage whooaa they never thought of it. All they like was each others company. After getting settled and luckily in the same city the destiny wrote a new chapter in their life. Having travelled together a lot they love trying different cuisines. Irish Coffee with Crepe is something they love always.</p>
+                        <p>Girl is studious <span role="img" aria-label="">🤓</span>&nbsp; But she would rather boast off her running feats and sports medals than her high scores. She is damn moody man. Sometime she will just call for a cup of tea and then donno where and all we roam spending the whole day. She loves keeping her fit and having watches and shoes.</p>
+                        <p>Boy has always been looked upon as a sincere and silent type. He likes to imagine himself as Sherlock. Well his childhood dream was to be detective <span role="img" aria-label="">🤠</span>&nbsp; He loves Badminton and swimming. Ahhhaaa I have never seen him bored. He is foody and has a highly adaptable taste.</p>
+                        <p>Besides being so different both of them love travelling together, Watching Action and SciFi movies, sometimes doing absolutely nothing and oo Yea trying different foods together. More than a couple they are buddies.</p>
                     </div>
                 </div>
             </div>
