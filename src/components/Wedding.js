@@ -12,7 +12,7 @@ class WeddingComp extends React.Component {
         return (
             <div style={{ marginLeft: '2%', marginRight: '2%' }}>
                 <p>Watch this space for the latest uploads from events. Yeah, let's hope for that <span role="img" aria-label="">😎</span></p>
-                <p>If you happen to have some nice clicks, Post em (as public post) on Instagram with #sushGotVibe and they will appear here.</p>
+                <p>If you happen to have some nice clicks, Post em (as public post) on Instagram with <span style={{fontStyle: 'italic'}}>#sushGotVibe</span> and they will appear here.</p>
                 <ul className="juicer-feed" data-feed-id="vaibhawj"></ul>
             </div>
         );
