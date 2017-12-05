@@ -13,7 +13,7 @@ class CoupleComp extends React.Component {
         return (
             <div style={{ marginLeft: '2%', marginRight: '2%' }}>
                 <div className="row">
-                    <div className="col-xs-12 col-sm-6">
+                    <div className="col-xs-12 col-sm-6" style={{marginBottom: '1rem' }}>
                         <CoupleCarousel />
                     </div>
                     <div className="col-xs-12 col-sm-6">
