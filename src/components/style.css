@@ -63,6 +63,10 @@
 .tab-pane { padding: 15px 0; }
 .tab-content { padding: 1rem 0rem 1rem 0rem }
 
+.tab-content {
+    font-family: 'Roboto', sans-serif;
+}
+
 .spinning.glyphicon {
   margin-right: 7px;
   top: 2px;
